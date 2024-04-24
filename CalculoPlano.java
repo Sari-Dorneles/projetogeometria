@@ -9,6 +9,8 @@ public class CalculoPlano {
     public double baseMaior =4;
     public double baseMenor =2;
     public double raio = 4;
+    public double diagonalmaior = 5;
+    public double diagonalmenor = 3;
 
     public double quadradoA(){
         return lado*lado;
@@ -40,7 +42,18 @@ public class CalculoPlano {
     public double circuloA(){
         return Math.PI * (raio * raio);
     }
-
+    public double losangoP(){
+        return 4 * lado;
+    }
+    public double losangoA(){
+        return (diagonalmaior*diagonalmenor)/2;
+    }
+    public double paralelogramoP(){
+        return (2 * base) + (2 * lado); 
+    }
+    public double paralelogramoA(){
+        return base * altura;
+    }
 
 
     public static void main(String[] args) {
@@ -56,7 +69,11 @@ public class CalculoPlano {
         double trapezioP = calculo.trapezioP();
         double circuloP = calculo.circuloP();
         double circuloA = calculo.circuloA();
+        double losangoP = calculo.losangoP();
+        double losangoA = calculo.losangoA();
+        double paralelogramoP = calculo.paralelogramoP();
+        double paralelogramoA = calculo.paralelogramoA();
 
-        System.out.println(circuloA);
+        System.out.println(paralelogramoA);
     }
-}
+} 
