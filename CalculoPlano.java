@@ -8,6 +8,7 @@ public class CalculoPlano {
     public double ladoT3 = 7;
     public double baseMaior =4;
     public double baseMenor =2;
+    public double raio = 4;
 
     public double quadradoA(){
         return lado*lado;
@@ -33,6 +34,13 @@ public class CalculoPlano {
     public double trapezioP(){
         return lado+lado+baseMaior+baseMenor; 
     }
+    public double circuloP(){
+        return 2 * Math.PI * raio;
+    }
+    public double circuloA(){
+        return Math.PI * (raio * raio);
+    }
+
 
 
     public static void main(String[] args) {
@@ -46,7 +54,9 @@ public class CalculoPlano {
         double TrianguloEquilateroP = calculo.trianguloEquilateroP();
         double trapezioA = calculo.trapezioA();
         double trapezioP = calculo.trapezioP();
+        double circuloP = calculo.circuloP();
+        double circuloA = calculo.circuloA();
 
-        System.out.println(TrianguloEquilateroP);
+        System.out.println(circuloA);
     }
 }
