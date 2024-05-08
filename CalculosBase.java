@@ -10,4 +10,5 @@ public class CalculosBase {
     public double raio = 4;
     public double diagonalmaior = 5;
     public double diagonalmenor = 3;
+    public double Nlados;
 }

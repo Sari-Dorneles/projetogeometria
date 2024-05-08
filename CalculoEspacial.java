@@ -1,12 +1,20 @@
 public class CalculoEspacial extends CalculoPlano {
-    
-    public double PrismaQuadradoV(){
-        return quadradoA() * altura;
+    //criar switch para selecionar qual é a base
+    double AreaBasePrisma;
+
+    public double PrismaV(){
+        return AreaBasePrisma * altura;
+    }
+    public double PrismaAL(){
+        return lado * altura * Nlados;
+    }
+    public double PrismaAT(){
+        return AreaBasePrisma + PrismaAL();
     }
     public static void main(String[] args) {
         CalculoEspacial calculo2 = new CalculoEspacial();
-        double PrismaQuadradoV = calculo2.PrismaQuadradoV();
-
-        System.out.println(PrismaQuadradoV);
+        double Prismav = calculo2.PrismaV();
+        double PrismaAL = calculo2.PrismaAL();
+        System.out.println(PrismaAL);
     }
 }
