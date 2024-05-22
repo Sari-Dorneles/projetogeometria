@@ -19,6 +19,12 @@ public class CalculoPlano extends CalculosBase {
     public double trianguloEquilateroP(){
         return 3*lado;
     }
+    public double trianguloP(){
+        return lado + ladoT2 + ladoT3;
+    }
+    public double trianguloA(){
+        return (lado*altura)/2;
+    }
     public double trapezioA(){
         return ((baseMaior+baseMenor)*altura)/2;
     }
@@ -54,6 +60,8 @@ public class CalculoPlano extends CalculosBase {
         double RetanguloP = calculo.retanguloP();
         double TrianguloEquilateroA = calculo.trianguloEquilateroA();
         double TrianguloEquilateroP = calculo.trianguloEquilateroP();
+        double trianguloP = calculo.trianguloP();
+        double trianguloA = calculo.trianguloA();
         double trapezioA = calculo.trapezioA();
         double trapezioP = calculo.trapezioP();
         double circuloP = calculo.circuloP();

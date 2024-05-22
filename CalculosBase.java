@@ -9,10 +9,14 @@ public class CalculosBase {
     public double ladoT3 = 7;
     public double baseMaior =4;
     public double baseMenor =2;
-    public double raio = 4;
+    public double raio = 2;
+    public double raio2 = 4;
     public double diagonalmaior = 5;
     public double diagonalmenor = 3;
     public double Nlados;
+    public double geratiz;
+    public double SuperficieBaseMaior = 10;
+    public double SuperficieBaseMenor = 5;
 
     public static void main(String[] args) {
         System.out.println("-----------------------------------------" + "\n" + 
