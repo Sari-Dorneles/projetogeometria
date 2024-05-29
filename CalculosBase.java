@@ -36,10 +36,12 @@ public class CalculosBase {
                 double altura = sc.nextDouble();
                 System.out.println("Informe a largura: ");
                 double largura = sc.nextDouble();
+                System.out.println("A área do retângulo é "+ cp.retanguloA(largura, altura));
 
                 case 2: 
                 System.out.println("Informe o lado: ");
                 double lado = sc.nextDouble();
+                System.out.println("A área do quadrado é " + cp.quadradoA(lado));
                 
                 case 3: 
                 System.out.println("Informe o lado 1: ");
@@ -48,7 +50,7 @@ public class CalculosBase {
                 double ladoT2 = sc.nextDouble();
                 System.out.println("Informe o lado 3: ");
                 double ladoT3 = sc.nextDouble();
-                System.out.println("O perímetro do triânculo é "+ cp.trianguloP(ladoT1,ladoT2,ladoT3));
+                System.out.println("O perímetro do triângulo é "+ cp.trianguloP(ladoT1,ladoT2,ladoT3));
             }
             break;
         case 2:
