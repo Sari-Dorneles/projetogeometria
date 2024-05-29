@@ -1,24 +1,12 @@
 import java.util.Scanner;
 
 public class CalculosBase {
-    public double lado = 2;
-    public double base = 4;
-    public double altura = 4;
-    public double ladoT1 = 3;
-    public double ladoT2 = 6;
-    public double ladoT3 = 7;
-    public double baseMaior =4;
-    public double baseMenor =2;
-    public double raio = 2;
-    public double raio2 = 4;
-    public double diagonalmaior = 5;
-    public double diagonalmenor = 3;
-    public double Nlados;
-    public double geratiz;
-    public double SuperficieBaseMaior = 10;
-    public double SuperficieBaseMenor = 5;
 
     public static void main(String[] args) {
+
+        CalculoPlano cp = new CalculoPlano();
+        CalculoEspacial ce = new CalculoEspacial();
+
         System.out.println("-----------------------------------------" + "\n" + 
         "BEM VINDO À CALCULADORA GEOMÉTRICA" + "\n" +
         "-----------------------------------------" + "\n" +
@@ -41,7 +29,7 @@ public class CalculosBase {
             "[6] Circulo" + "\n" +
             "[7] Losango" + "\n" +
             "[8] Paralelograma");
-            int escolha2 = Integer.parseInt(sc.nextLine());
+            int escolha2 = sc.nextInt();
             switch (escolha2){
                 case 1: 
                 System.out.println("Informe a altura: ");
@@ -56,10 +44,11 @@ public class CalculosBase {
                 case 3: 
                 System.out.println("Informe o lado 1: ");
                 double ladoT1 = sc.nextDouble();
-                System.out.println("Informe o lado 1: ");
+                System.out.println("Informe o lado 2: ");
                 double ladoT2 = sc.nextDouble();
-                System.out.println("Informe o lado 1: ");
+                System.out.println("Informe o lado 3: ");
                 double ladoT3 = sc.nextDouble();
+                System.out.println("O perímetro do triânculo é "+ cp.trianguloP(ladoT1,ladoT2,ladoT3));
             }
             break;
         case 2:

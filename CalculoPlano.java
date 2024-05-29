@@ -1,76 +1,52 @@
 public class CalculoPlano extends CalculosBase {
     //atributos
 
-    public double quadradoA(){
+    public double quadradoA(double lado){
         return lado*lado;
     }
-    public double quadradoP(){
+    public double quadradoP(double lado){
         return 4*lado;
     }
-    public double retanguloA(){
+    public double retanguloA(double base, double altura){
         return base*altura;
     }
-    public double retanguloP(){
+    public double retanguloP(double base, double altura){
         return (2*base)+(2*altura);
     }
-    public double trianguloEquilateroA(){
+    public double trianguloEquilateroA(double lado){
         return ((lado*lado)*Math.sqrt(3))/4;
     }
-    public double trianguloEquilateroP(){
+    public double trianguloEquilateroP(double lado){
         return 3*lado;
     }
-    public double trianguloP(){
-        return lado + ladoT2 + ladoT3;
+    public double trianguloP(double ladoT1, double ladoT2,double ladoT3){
+        return ladoT1 + ladoT2 + ladoT3;
     }
-    public double trianguloA(){
+    public double trianguloA(double lado, double altura){
         return (lado*altura)/2;
     }
-    public double trapezioA(){
+    public double trapezioA(double baseMaior, double baseMenor, double altura){
         return ((baseMaior+baseMenor)*altura)/2;
     }
-    public double trapezioP(){
+    public double trapezioP(double lado, double baseMaior, double baseMenor){
         return lado+lado+baseMaior+baseMenor; 
     }
-    public double circuloP(){
+    public double circuloP(double raio){
         return 2 * Math.PI * raio;
     }
-    public double circuloA(){
+    public double circuloA(double raio){
         return Math.PI * (raio * raio);
     }
-    public double losangoP(){
+    public double losangoP(double lado){
         return 4 * lado;
     }
-    public double losangoA(){
+    public double losangoA(double diagonalmenor, double diagonalmaior){
         return (diagonalmaior*diagonalmenor)/2;
     }
-    public double paralelogramoP(){
+    public double paralelogramoP(double base, double lado){
         return (2 * base) + (2 * lado); 
     }
-    public double paralelogramoA(){
+    public double paralelogramoA(double base, double altura){
         return base * altura;
-    }
-
-
-    public static void main(String[] args) {
-        CalculoPlano calculo = new CalculoPlano();
-
-        double QuadradoA = calculo.quadradoA();
-        double QuadradoP = calculo.quadradoP();
-        double RetanguloA = calculo.retanguloA();
-        double RetanguloP = calculo.retanguloP();
-        double TrianguloEquilateroA = calculo.trianguloEquilateroA();
-        double TrianguloEquilateroP = calculo.trianguloEquilateroP();
-        double trianguloP = calculo.trianguloP();
-        double trianguloA = calculo.trianguloA();
-        double trapezioA = calculo.trapezioA();
-        double trapezioP = calculo.trapezioP();
-        double circuloP = calculo.circuloP();
-        double circuloA = calculo.circuloA();
-        double losangoP = calculo.losangoP();
-        double losangoA = calculo.losangoA();
-        double paralelogramoP = calculo.paralelogramoP();
-        double paralelogramoA = calculo.paralelogramoA();
-
-        System.out.println(paralelogramoA);
     }
 } 
