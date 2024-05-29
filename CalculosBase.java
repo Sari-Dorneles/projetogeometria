@@ -31,8 +31,36 @@ public class CalculosBase {
 
         int escolha = sc.nextInt();
         switch (escolha) {
-        case 1:
-            System.out.println("plana");
+        case 1: //plana
+            System.out.println("DIGITE A OPÇÃO DE CALCULO"+"\n" +
+            "[1] Retangulo" + "\n" + 
+            "[2] Quadrado" + "\n" +
+            "[3] Triangulo" + "\n" +
+            "[4] Triangulo equilatero" + "\n" +
+            "[5] Trapezio" + "\n"+
+            "[6] Circulo" + "\n" +
+            "[7] Losango" + "\n" +
+            "[8] Paralelograma");
+            int escolha2 = Integer.parseInt(sc.nextLine());
+            switch (escolha2){
+                case 1: 
+                System.out.println("Informe a altura: ");
+                double altura = sc.nextDouble();
+                System.out.println("Informe a largura: ");
+                double largura = sc.nextDouble();
+
+                case 2: 
+                System.out.println("Informe o lado: ");
+                double lado = sc.nextDouble();
+                
+                case 3: 
+                System.out.println("Informe o lado 1: ");
+                double ladoT1 = sc.nextDouble();
+                System.out.println("Informe o lado 1: ");
+                double ladoT2 = sc.nextDouble();
+                System.out.println("Informe o lado 1: ");
+                double ladoT3 = sc.nextDouble();
+            }
             break;
         case 2:
             System.out.println("epacial");
