@@ -17,9 +17,15 @@ public class CalculosBase {
 
         Scanner sc = new Scanner(System.in);
 
-        int escolha = sc.nextInt();
-        switch (escolha) {
-        case 1: //plana
+        int escolhaG = sc.nextInt();
+        switch (escolhaG) {
+        case 1: //Geometria plana
+        System.out.println("Escolha o calculo que vocÊ deseja: " + "\n" + 
+        "[1] Perímetro" + "\n"+
+        "[2] Área");
+        int escolha2 = sc.nextInt();
+        switch (escolha2) {
+            case 1:
             System.out.println("DIGITE A OPÇÃO DE CALCULO"+"\n" +
             "[1] Retangulo" + "\n" + 
             "[2] Quadrado" + "\n" +
@@ -29,29 +35,47 @@ public class CalculosBase {
             "[6] Circulo" + "\n" +
             "[7] Losango" + "\n" +
             "[8] Paralelograma");
-            int escolha2 = sc.nextInt();
-            switch (escolha2){
-                case 1: 
-                System.out.println("Informe a altura: ");
+            int escolhaForma = sc.nextInt();
+            switch  (escolhaForma){
+                case 1: // perímetro
+                System.out.println("Informe a medida da altura: ");
                 double altura = sc.nextDouble();
-                System.out.println("Informe a largura: ");
+                System.out.println("Informe a medida da largura: ");
                 double largura = sc.nextDouble();
-                System.out.println("A área do retângulo é "+ cp.retanguloA(largura, altura));
-
+                System.out.println("O perímetro do retângulo é "+ cp.retanguloP(largura, altura));
+                break;
                 case 2: 
-                System.out.println("Informe o lado: ");
+                System.out.println("Informe a medida do lado: ");
                 double lado = sc.nextDouble();
-                System.out.println("A área do quadrado é " + cp.quadradoA(lado));
-                
+                System.out.println("O perímetro do quadrado é " + cp.quadradoP(lado));
+                break;
                 case 3: 
-                System.out.println("Informe o lado 1: ");
+                System.out.println("Informe a medida do lado 1: ");
                 double ladoT1 = sc.nextDouble();
-                System.out.println("Informe o lado 2: ");
+                System.out.println("Informe a medida do lado 2: ");
                 double ladoT2 = sc.nextDouble();
-                System.out.println("Informe o lado 3: ");
+                System.out.println("Informe a medida do lado 3: ");
                 double ladoT3 = sc.nextDouble();
                 System.out.println("O perímetro do triângulo é "+ cp.trianguloP(ladoT1,ladoT2,ladoT3));
-            }
+                break;
+                case 4: 
+                System.out.println("Informe a medida do lado");
+                double ladoT = sc.nextDouble();
+                System.out.println(cp.trianguloEquilateroP(ladoT));
+                break;
+                case 5: 
+                System.out.println("Informe a medida da base maior: ");
+                double baseMaior = sc.nextDouble();
+                System.out.println("Informe a medida da área menor: ");
+                double baseMenor = sc.nextDouble();
+                System.out.println("Informe a medida do lado: ");
+                double ladoTP = sc.nextDouble();
+                System.out.println("O perímetro do trapézio é " + cp.trapezioP(ladoTP, baseMaior, baseMenor)); 
+                break;
+        
+            default:
+                break;
+        }
             break;
         case 2:
             System.out.println("epacial");
@@ -60,5 +84,6 @@ public class CalculosBase {
             System.out.println("Opção inválida" + "\n" + "Por favor, escolha novamente.");
         }
     }
+}
 }
 

@@ -28,8 +28,8 @@ public class CalculoPlano extends CalculosBase {
     public double trapezioA(double baseMaior, double baseMenor, double altura){
         return ((baseMaior+baseMenor)*altura)/2;
     }
-    public double trapezioP(double lado, double baseMaior, double baseMenor){
-        return lado+lado+baseMaior+baseMenor; 
+    public double trapezioP(double ladoTP, double baseMaior, double baseMenor){
+        return (ladoTP*2)+baseMaior+baseMenor; 
     }
     public double circuloP(double raio){
         return 2 * Math.PI * raio;
