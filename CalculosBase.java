@@ -72,6 +72,23 @@ public class CalculosBase {
                 double ladoTP = sc.nextDouble();
                 System.out.println("O perímetro do trapézio é " + cp.trapezioP(ladoTP, baseMaior, baseMenor)); 
                 break;
+                case 6:
+                System.out.println("Informe a medidad do raio: ");
+                double raio = sc.nextDouble();
+                System.out.println("O perímetro do círculo é " + cp.circuloP(raio));
+                break;
+                case 7:
+                System.out.println("Informe a medida do lado: ");
+                double ladoL = sc.nextDouble();
+                System.out.println("O perímetro do losango é " + cp.losangoP(ladoL));
+                break;
+                case 8:
+                System.out.println("Informe a medida da base: ");
+                double base = sc.nextDouble();
+                System.out.println("Informe a medida do lado: ");
+                double ladoP = sc.nextDouble();
+                System.out.println("O perímetro do Paralelograma é " + cp.paralelogramoP(base, ladoP));
+                break;
         
             default:
                 break;

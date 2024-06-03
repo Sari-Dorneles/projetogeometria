@@ -37,14 +37,14 @@ public class CalculoPlano extends CalculosBase {
     public double circuloA(double raio){
         return Math.PI * (raio * raio);
     }
-    public double losangoP(double lado){
-        return 4 * lado;
+    public double losangoP(double ladoL){
+        return 4 * ladoL;
     }
     public double losangoA(double diagonalmenor, double diagonalmaior){
         return (diagonalmaior*diagonalmenor)/2;
     }
-    public double paralelogramoP(double base, double lado){
-        return (2 * base) + (2 * lado); 
+    public double paralelogramoP(double base, double ladoP){
+        return (2 * base) + (2 * ladoP); 
     }
     public double paralelogramoA(double base, double altura){
         return base * altura;
