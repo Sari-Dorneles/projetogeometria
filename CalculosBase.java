@@ -92,7 +92,70 @@ public class CalculosBase {
                     System.out.println("O perímetro do Paralelograma é " + cp.paralelogramoP(base, ladoP));
                     break;
                 }
-                default:
+                case 2:
+                    System.out.println("DIGITE A OPÇÃO DE CÁLCULO"+"\n" +
+                    "[1] Retângulo" + "\n" + 
+                    "[2] Quadrado" + "\n" +
+                    "[3] Triângulo" + "\n" +
+                    "[4] Triângulo equilátero" + "\n" +
+                    "[5] Trapézio" + "\n"+
+                    "[6] Circulo" + "\n" +
+                    "[7] Losango" + "\n" +
+                    "[8] Paralelograma");
+                    int escolhaForma2 = sc.nextInt();
+                    switch  (escolhaForma2){
+                        case 1:
+                        System.out.println("Informe a medida do lado: ");
+                        double ladoR = sc.nextDouble();
+                        System.out.println("Informe a medida da altura ");
+                        double alturaR = sc.nextDouble();
+                        System.out.println("A área é :" + cp.retanguloA(ladoR, alturaR));
+                        break;
+                        case 2: 
+                        System.out.println("Informe a medida do lado: ");
+                        double ladoQ = sc.nextDouble();
+                        System.out.println("A área é: " + cp.quadradoA(ladoQ));
+                        break;
+                        case 3: 
+                        System.out.println("Informe a medida do lado: ");
+                        double ladoT = sc.nextDouble();
+                        System.out.println("Informe a medida da altura: ");
+                        double alturaT = sc.nextDouble();
+                        System.out.println("A área é: " + cp.trianguloA(ladoT, alturaT));
+                        break;
+                        case 4:
+                        System.out.println("Informe a medida do lado: ");
+                        double ladoTE = sc.nextDouble();
+                        System.out.println("A área é: " + cp.trianguloEquilateroA(ladoTE));
+                        break;
+                        case 5:
+                        System.out.println("Informe a medida da base menor: ");
+                        double baseMenorTR = sc.nextDouble();
+                        System.out.println("Informe a medida da base maior: ");
+                        double baseMaiorTR = sc.nextDouble();
+                        System.out.println("Informe a medida da altura: ");
+                        double alturaTR = sc.nextDouble();
+                        System.out.println("A área é: " + cp.trapezioA(baseMaiorTR, baseMenorTR, alturaTR));
+                        break;
+                        case 6: 
+                        System.out.println("Informe a medida do raio");
+                        double raioCO = sc.nextDouble();
+                        System.out.println("A área é: " + cp.circuloA(raioCO));
+                        break;
+                        case 7:
+                        System.out.println("Informe a medida da diagonal menor: ");
+                        double diagonalmenorL = sc.nextDouble();
+                        System.out.println("Informe a medida da diagonal maior: ");
+                        double diagonalmaiorL = sc.nextDouble();
+                        System.out.println("A área é: " + cp.losangoA(diagonalmenorL, diagonalmaiorL));
+                        break;
+                        case 8:
+                        System.out.println("Informe a medida da base: ");
+                        double baseP = sc.nextDouble();
+                        System.out.println("Informe a medida da altura: ");
+                        double alturaP = sc.nextDouble();
+                        System.out.println("A área é: " + cp.paralelogramoA(baseP, alturaP));
+                        }   
                     break;
             }break;
         case 2://espacial
