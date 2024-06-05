@@ -7,7 +7,8 @@ public class CalculosBase {
         CalculoPlano cp = new CalculoPlano();
         CalculoEspacial ce = new CalculoEspacial();
 
-        System.out.println("-----------------------------------------" + "\n" + 
+        while (true) {
+            System.out.println("-----------------------------------------" + "\n" + 
         "BEM VINDO À CALCULADORA GEOMÉTRICA" + "\n" +
         "-----------------------------------------" + "\n" +
         "DIGITE A OPÇÃO DESEJADA: " + "\n" +
@@ -252,5 +253,6 @@ public class CalculosBase {
                     System.out.println("Opção inválida" + "\n" + "Por favor, escolha novamente.");
             }
     }
+        }
 }}
 
