@@ -96,7 +96,8 @@ public class CalculosBase {
         case 2://espacial
             System.out.println("Escolha o cálculo de geometria espacial que você2 deseja: " + "\n" + 
             "[1] Volume" + "\n"+
-            "[2] Área");
+            "[2] Área lateral" + "\n"+
+            "[3] Área da Base");
             int escolha3 = sc.nextInt();
             switch (escolha3) {
                 case 1:
@@ -162,7 +163,57 @@ public class CalculosBase {
                     double alturaTPI = sc.nextDouble();
                     System.out.println("O volume é: " + ce.TroncoPiramideV(SuperficieBaseMaior,SuperficieBaseMenor,alturaTPI));
                     break;
-                }
+                }break;
+                case 2:
+                System.out.println("DIGITE A OPÇÃO DE CÁLCULO"+"\n" +
+                "[1] Cone" + "\n" + 
+                "[2] Cilindro" + "\n" +
+                "[3] Prisma" + "\n" +
+                "[4] Pirâmide" + "\n" +
+                "[5] Esfera");
+                int escolhaForma2 = sc.nextInt();
+                switch  (escolhaForma2){
+                    case 1:
+                    System.out.println("Informe a medida do raio: ");
+                    double raioC2 = sc.nextDouble();
+                    System.out.println("Informe a medida da geratriz: ");
+                    double geratriz = sc.nextDouble();
+                    System.out.println("A área lateral é: " + ce.ConeAL(raioC2, geratriz));
+                    break;
+                    case 2:
+                    System.out.println("Informe a medida do raio: ");
+                    double raioC = sc.nextDouble();
+                    System.out.println("Informe a altura: ");
+                    double alturaC = sc.nextDouble();
+                    System.out.println("A área lateral é: " + ce.CilindroAL(raioC, alturaC));
+                    break;
+                    case 3: 
+                    System.out.println("Informe a medida do lado");
+                    double ladoP2 = sc.nextDouble();
+                    System.out.println("Informe o número de lados: ");
+                    double NladosP2 = sc.nextDouble();
+                    System.out.println("Informe a altura: ");
+                    double alturaP2 = sc.nextDouble();
+                    System.out.println("A área lateral do prisma é: " + ce.PrismaAL(ladoP2, alturaP2, NladosP2));
+                    break;
+                    case 4:
+                    System.out.println("Informe a área dos triangulos: ");
+                    double AreaTriangulos = sc.nextDouble();
+                    System.out.println("Informe o número de lados ");
+                    double NladosPI2 = sc.nextDouble();
+                    System.out.println("A área lateral é: " + ce.PiramideAL(NladosPI2, AreaTriangulos));
+                    break;
+                    case 5: 
+                    System.out.println("Informe o raio: ");
+                    double raioE2 = sc.nextDouble();
+                    System.out.println("A área da superfície é: " + ce.EsferaAS(raioE2));
+                    break;
+                }break;
+                case 3:
+                System.out.println("DIGITE A OPÇÃO DE CÁLCULO"+"\n" +
+                "[1] Cone" + "\n" + 
+                "[2] Cilindro");
+                
 
                 default:
                     System.out.println("Opção inválida" + "\n" + "Por favor, escolha novamente.");

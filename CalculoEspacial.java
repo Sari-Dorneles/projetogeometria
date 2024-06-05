@@ -7,8 +7,8 @@ public class CalculoEspacial extends CalculoPlano {
     public double PrismaV(double alturaP, double AreaBasePrisma){
         return AreaBasePrisma * alturaP;
     }
-    public double PrismaAL(double ladoP, double alturaP, double Nlados){
-        return ladoP * alturaP * Nlados;
+    public double PrismaAL(double ladoP2, double alturaP2, double NladosP2){
+        return ladoP2 * alturaP2 * NladosP2;
     }
     public double PrismaAT(double Arealateral, double AreaBasePrisma){
         return AreaBasePrisma + Arealateral;
@@ -19,8 +19,8 @@ public class CalculoEspacial extends CalculoPlano {
     public double ConeAB(double raioC){
         return Math.PI * (raioC *raioC);
     }
-    public double ConeAL(double raio, double geratriz){
-        return Math.PI*raio*geratriz;
+    public double ConeAL(double raioC2, double geratriz){
+        return Math.PI*raioC2*geratriz;
     }
     public double CilindroV(double raioC, double alturaC){
         return Math.PI * (raioC * raioC) * alturaC;
@@ -31,8 +31,8 @@ public class CalculoEspacial extends CalculoPlano {
     public double CilindroAL(double raioC, double alturaC){
         return (Math.PI*Math.PI)*raioC* alturaC;
     }
-    public double PiramideAL(double Nlados, double AreaBasePiramide){
-        return AreaBasePiramide * Nlados;
+    public double PiramideAL(double NladosPI2, double AreaTriangulos){
+        return AreaTriangulos * NladosPI2;
     }
     public double PiramideAT(double piramideAL, double AreaBasePiramide){
         return piramideAL + AreaBasePiramide;
@@ -40,8 +40,8 @@ public class CalculoEspacial extends CalculoPlano {
     public double PiramideV(double alturaPI, double AreaBasePiramide){
         return (AreaBasePiramide  * alturaPI)/3;
     }
-    public double EsferaAS(double raioE){
-        return 4*Math.PI*(raioE * raioE);
+    public double EsferaAS(double raioE2){
+        return 4*Math.PI*(raioE2 * raioE2);
     }
     public double EsferaV(double raioE){
         return (4/3)*Math.PI*(raioE*raioE*raioE);
