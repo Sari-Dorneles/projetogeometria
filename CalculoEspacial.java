@@ -1,54 +1,55 @@
 public class CalculoEspacial extends CalculoPlano {
     //criar switch para selecionar qual é a base
-    double AreaBasePrisma;
+    
     double AreaBaseTriangulo;
+    double AreaBasePiramide;
 
-    public double PrismaV(double altura){
-        return AreaBasePrisma * altura;
+    public double PrismaV(double alturaP, double AreaBasePrisma){
+        return AreaBasePrisma * alturaP;
     }
-    public double PrismaAL(double lado, double altura, double Nlados){
-        return lado * altura * Nlados;
+    public double PrismaAL(double ladoP, double alturaP, double Nlados){
+        return ladoP * alturaP * Nlados;
     }
-    public double PrismaAT(double Arealateral){
+    public double PrismaAT(double Arealateral, double AreaBasePrisma){
         return AreaBasePrisma + Arealateral;
     }
-    public double ConeV(double raio, double altura){
-        return (Math.PI * (raio *raio) * altura)/3;
+    public double ConeV(double raioC, double alturaC){
+        return (Math.PI * (raioC *raioC) * alturaC)/3;
     }
-    public double ConeAB(double raio){
-        return Math.PI * (raio*raio);
+    public double ConeAB(double raioC){
+        return Math.PI * (raioC *raioC);
     }
     public double ConeAL(double raio, double geratriz){
         return Math.PI*raio*geratriz;
     }
-    public double CilindroV(double raio, double altura){
-        return Math.PI * (raio * raio) * altura;
+    public double CilindroV(double raioC, double alturaC){
+        return Math.PI * (raioC * raioC) * alturaC;
     }
-    public double CilindroAB(double raio){
-        return Math.PI* (raio * raio);
+    public double CilindroAB(double raioC){
+        return Math.PI* (raioC * raioC);
     }
-    public double CilindroAL(double raio, double altura){
-        return (Math.PI*Math.PI)*raio*altura;
+    public double CilindroAL(double raioC, double alturaC){
+        return (Math.PI*Math.PI)*raioC* alturaC;
     }
-    public double PiramideAL(double Nlados, double AreaBasePrisma){
-        return AreaBaseTriangulo * Nlados;
+    public double PiramideAL(double Nlados, double AreaBasePiramide){
+        return AreaBasePiramide * Nlados;
     }
-    public double PiramideAT(double piramideAL){
-        return piramideAL + AreaBaseTriangulo;
+    public double PiramideAT(double piramideAL, double AreaBasePiramide){
+        return piramideAL + AreaBasePiramide;
     }
-    public double PirimideV(double altura){
-        return (AreaBaseTriangulo  * altura)/3;
+    public double PiramideV(double alturaPI, double AreaBasePiramide){
+        return (AreaBasePiramide  * alturaPI)/3;
     }
-    public double EsferaAS(double raio){
-        return 4*Math.PI*(raio * raio);
+    public double EsferaAS(double raioE){
+        return 4*Math.PI*(raioE * raioE);
     }
-    public double EsferaV(double raio){
-        return (4/3)*Math.PI*(raio*raio*raio);
+    public double EsferaV(double raioE){
+        return (4/3)*Math.PI*(raioE*raioE*raioE);
     }
-    public double TroncoConeV(double raio, double altura, double raio2){
-        return (Math.PI*altura*((raio*raio)+ raio + raio2+(raio2 * raio2))/3);
+    public double TroncoConeV(double raioTC, double alturaTC, double raio2TC){
+        return (Math.PI*alturaTC*((raioTC*raioTC)+ raioTC + raio2TC+(raio2TC * raio2TC))/3);
     }
-    public double TroncoPiramideV(double altura, double SuperficieBaseMaior, double SuperficieBaseMenor){
-        return (altura/3)*(SuperficieBaseMaior +Math.sqrt(SuperficieBaseMaior*SuperficieBaseMenor)+SuperficieBaseMenor);
+    public double TroncoPiramideV(double alturaTPI, double SuperficieBaseMaior, double SuperficieBaseMenor){
+        return (alturaTPI/3)*(SuperficieBaseMaior +Math.sqrt(SuperficieBaseMaior*SuperficieBaseMenor)+SuperficieBaseMenor);
     }
 }
