@@ -13,7 +13,8 @@ public class CalculosBase {
         "-----------------------------------------" + "\n" +
         "DIGITE A OPÇÃO DESEJADA: " + "\n" +
         "[1] Geometria Plana" + "\n" + 
-        "[2] Geometria Espacial" + "\n" + 
+        "[2] Geometria Espacial" + "\n" +
+        "[3] Sair" + "\n" +
         "-----------------------------------------");
 
         Scanner sc = new Scanner(System.in);
@@ -252,6 +253,8 @@ public class CalculosBase {
                 default:
                     System.out.println("Opção inválida" + "\n" + "Por favor, escolha novamente.");
             }
+            case 3:
+            System.exit(0);
     }
         }
 }}
