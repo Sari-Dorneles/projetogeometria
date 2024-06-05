@@ -31,8 +31,8 @@ public class CalculosBase {
                 System.out.println("DIGITE A OPÇÃO DE CÁLCULO"+"\n" +
                 "[1] Retângulo" + "\n" + 
                 "[2] Quadrado" + "\n" +
-                "[3] Triangulo" + "\n" +
-                "[4] Triangulo equilátero" + "\n" +
+                "[3] Triângulo" + "\n" +
+                "[4] Triângulo equilátero" + "\n" +
                 "[5] Trapézio" + "\n"+
                 "[6] Circulo" + "\n" +
                 "[7] Losango" + "\n" +
