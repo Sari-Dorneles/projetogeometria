@@ -10,14 +10,14 @@ public class CalculoEspacial extends CalculoPlano {
     public double PrismaAL(double ladoP2, double alturaP2, double NladosP2){
         return ladoP2 * alturaP2 * NladosP2;
     }
-    public double PrismaAT(double Arealateral, double AreaBasePrisma){
-        return AreaBasePrisma + Arealateral;
+    public double PrismaAT(double ArealateralP, double AreaBasePrisma){
+        return AreaBasePrisma + ArealateralP;
     }
     public double ConeV(double raioC, double alturaC){
         return (Math.PI * (raioC *raioC) * alturaC)/3;
     }
-    public double ConeAB(double raioC){
-        return Math.PI * (raioC *raioC);
+    public double ConeAB(double raioCO){
+        return Math.PI * (raioCO *raioCO);
     }
     public double ConeAL(double raioC2, double geratriz){
         return Math.PI*raioC2*geratriz;

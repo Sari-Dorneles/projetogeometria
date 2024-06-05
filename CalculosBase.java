@@ -92,12 +92,13 @@ public class CalculosBase {
                 }
                 default:
                     break;
-            }
+            }break;
         case 2://espacial
             System.out.println("Escolha o cálculo de geometria espacial que você2 deseja: " + "\n" + 
             "[1] Volume" + "\n"+
             "[2] Área lateral" + "\n"+
-            "[3] Área da Base");
+            "[3] Área da Base" + "\n"+
+            "[4] Área total");
             int escolha3 = sc.nextInt();
             switch (escolha3) {
                 case 1:
@@ -213,8 +214,40 @@ public class CalculosBase {
                 System.out.println("DIGITE A OPÇÃO DE CÁLCULO"+"\n" +
                 "[1] Cone" + "\n" + 
                 "[2] Cilindro");
-                
-
+                int escolhaForma3 = sc.nextInt();
+                switch  (escolhaForma3){
+                    case 1:
+                    System.out.println("Informe a medida do raio: ");
+                    double raioCO = sc.nextDouble();
+                    System.out.println("A área da base é: " + ce.ConeAB(raioCO));
+                    break;
+                    case 2:
+                    System.out.println("Informe o raio: ");
+                    double raioC = sc.nextDouble();
+                    System.out.println("A área da base é: " + ce.CilindroAB(raioC));
+                    break;
+                }break;
+                case 4:
+                System.out.println("DIGITE A OPÇÃO DE CÁLCULO"+"\n" +
+                "[1] Prisma" + "\n" + 
+                "[2] Pirâmide");
+                int escolhaForma4 = sc.nextInt();
+                switch  (escolhaForma4){
+                    case 1:
+                    System.out.println("Informe a área lateral ");
+                    double ArealateralP = sc.nextDouble();
+                    System.out.println("Informe a área da base: ");
+                    double AreaBasePrisma = sc.nextDouble();
+                    System.out.println("A área total é:" + ce.PrismaAT(ArealateralP, AreaBasePrisma));
+                    break;
+                    case 2:
+                    System.out.println("Informe a área lateral");
+                    double piramideAL = sc.nextDouble();
+                    System.out.println("Informe a área da base");
+                    double AreaBasePiramide = sc.nextDouble();
+                    System.out.println("A área total é: " + ce.PiramideAT(piramideAL, AreaBasePiramide));
+                    break;
+                }break;
                 default:
                     System.out.println("Opção inválida" + "\n" + "Por favor, escolha novamente.");
             }
